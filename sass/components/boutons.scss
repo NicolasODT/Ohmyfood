@@ -1,0 +1,18 @@
+@use "../utils/mixins.scss";
+
+@mixin basic-bouton {
+  user-select: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 0;
+  @include mixins.box-shadow;
+  @include mixins.degrade;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.1);
+    @include mixins.box-shadow;
+  }
+}

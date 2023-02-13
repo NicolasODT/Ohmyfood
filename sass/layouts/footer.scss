@@ -1,0 +1,28 @@
+@use "../utils/colors.scss";
+
+footer {
+    padding: 20px;
+    background-color: colors.$gris;
+    color: white;
+    h3 {
+        user-select: none;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-family: 'Shrikhand', cursive;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        display: table;
+        line-height: 30px;
+        i {
+            margin-right: 15px;
+            width: 15px;
+        }
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+}

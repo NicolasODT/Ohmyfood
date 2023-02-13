@@ -1,0 +1,24 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins";
+@use "../components/boutons.scss";
+
+.explorer-restaurant {
+    text-align: center;
+    padding: 24px 20px;
+    background-color: colors.$gristresclaire;
+    h2 {
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: 700;
+        padding: 18px 50px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 300;
+    }
+    button {
+        @include boutons.basic-bouton;
+        margin: 30px 50px;
+    }
+}

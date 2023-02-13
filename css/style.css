@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+.fonctionnement {
+  padding: 20px;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes shadow__cadre__restaurant {
+  0% {
+    -webkit-box-box-shadow: 0px 4px 12px -3px #99e2d0;
+    box-shadow: 0px 4px 12px -3px #99e2d0;
+  }
+  100% {
+    -webkit-box-shadow: 0px 4px 12px -3px #32b091;
+    box-shadow: 0px 4px 12px -3px #32b091;
+  }
+}
+@keyframes shadow__cadre__restaurant {
+  0% {
+    -webkit-box-box-shadow: 0px 4px 12px -3px #99e2d0;
+    box-shadow: 0px 4px 12px -3px #99e2d0;
+  }
+  100% {
+    -webkit-bbox-shadow: 0px 4px 12px -3px #32b091;
+    box-shadow: 0px 4px 12px -3px #32b091;
+  }
+}
+@-webkit-keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.9, 1.1, 1);
+    transform: scale3d(0.9, 1.1, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.1, 0.9, 1);
+    transform: scale3d(1.1, 0.9, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1, 0.95, 1);
+    transform: scale3d(1, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1, 1);
+    transform: scale3d(0.95, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes disparition {
+  0% {
+    -webkit-transform: scale(100);
+    -ms-transform: scale(100);
+    transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes disparition {
+  0% {
+    -webkit-transform: scale(100);
+    -ms-transform: scale(100);
+    transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+}
+header {
+  user-select: none;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  font-size: 32px;
+  padding: 15px;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+  position: relative;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #383838;
+  padding: 18px;
+  background-color: #e6e6e6;
+}
+
+.explorer-restaurant {
+  text-align: center;
+  padding: 24px 20px;
+  background-color: #f5f5f5;
+}
+.explorer-restaurant h2 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 18px 50px;
+}
+.explorer-restaurant p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.explorer-restaurant button {
+  user-select: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  cursor: pointer;
+  margin: 30px 50px;
+}
+.explorer-restaurant button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 3px 8px -3px #000000;
+}
+
+.fonctionnement {
+  counter-reset: numeros_fonctionnement;
+}
+.fonctionnement h2 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+.fonctionnement ol {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .fonctionnement ol {
+    flex-direction: column;
+  }
+}
+.fonctionnement li {
+  cursor: pointer;
+  user-select: none;
+  margin-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+}
+.fonctionnement li::before {
+  content: counter(numeros_fonctionnement);
+  counter-increment: numeros_fonctionnement;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  min-width: 25px;
+  min-height: 25px;
+}
+.fonctionnement li:hover {
+  background: rgba(147, 86, 220, 0.15);
+}
+.fonctionnement li:hover .fas {
+  color: #9356DC;
+}
+.fonctionnement i {
+  font-size: 20px;
+  width: 20px;
+  margin: 26px 30px 26px 12px;
+}
+.fonctionnement .fas {
+  color: #7a7a7a;
+}
+
+.restaurant {
+  padding: 0 20px;
+  margin-top: 45px;
+  padding-bottom: 65px;
+  background-color: #f5f5f5;
+}
+.restaurant .restaurant__cadre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .restaurant .restaurant__cadre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .restaurant .restaurant__cadre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.restaurant .restaurant__cadre .nouveau {
+  position: relative;
+}
+.restaurant .restaurant__cadre .nouveau::before {
+  content: "Nouveau";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 28px;
+  width: 80px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  right: 12px;
+  top: 12px;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+}
+.restaurant .restaurant__cadre .nouveau:hover::before,
+.restaurant .restaurant__cadre .nouveau:focus::before {
+  -webkit-animation: jello-vertical 0.9s both;
+  animation: jello-vertical 0.9s both;
+}
+.restaurant h2 {
+  padding: 58px 0 20px 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.restaurant .restaurant__cadre__interieur {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+}
+.restaurant .restaurant__cadre__interieur:hover {
+  -webkit-animation: shadow__cadre__restaurant 1.2s linear infinite alternate-reverse both;
+  animation: shadow__cadre__restaurant 1.2s linear infinite alternate-reverse both;
+}
+.restaurant .restaurant__cadre__interieur h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.restaurant .restaurant__cadre__interieur img {
+  user-select: none;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant .restaurant__cadre__interieur h3,
+.restaurant .restaurant__cadre__interieur p {
+  margin-left: 15px;
+}
+.restaurant .restaurant__cadre__interieur i {
+  transition: 2s;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  right: 12px;
+  transform: translate(-50%);
+}
+.restaurant .restaurant__cadre__interieur .fas {
+  color: transparent;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+}
+.restaurant .restaurant__cadre__interieur .fas:hover {
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  animation: opacity 1s;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translate(-50%);
+  -webkit-text-stroke: 0;
+  -webkit-text-stroke-color: transparent;
+}
+.restaurant .restaurant__cadre__interieur i {
+  bottom: 25px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #383838;
+  color: white;
+}
+footer h3 {
+  user-select: none;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Shrikhand", cursive;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  display: table;
+  line-height: 30px;
+}
+footer a i {
+  margin-right: 15px;
+  width: 15px;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ensemble {
+  margin-top: -40px;
+  position: relative;
+  padding: 40px 0;
+  border-radius: 40px 40px 0 0;
+  background-color: #f5f5f5;
+}
+
+.ensemble__titre {
+  display: flex;
+}
+.ensemble__titre h2 {
+  margin: 0 25px 25px 25px;
+  font-family: "Shrikhand", cursive;
+  font-size: 27px;
+}
+.ensemble__titre i {
+  transition: 2s;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  right: 12px;
+  transform: translate(-50%);
+}
+.ensemble__titre .fas {
+  color: transparent;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+}
+.ensemble__titre .fas:hover {
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  animation: opacity 1s;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translate(-50%);
+  -webkit-text-stroke: 0;
+  -webkit-text-stroke-color: transparent;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+}
+@media (min-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.menu .menu__global {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .menu__global h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 10px 20px;
+}
+.menu .menu__global h3::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 0px;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+
+.menu__global__cadre {
+  cursor: pointer;
+  animation: apparition 1.5s;
+  animation-fill-mode: backwards;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+}
+.menu__global__cadre:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.menu__global__cadre:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.menu__global__cadre:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.menu__global__cadre:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.menu__global__cadre:nth-child(5) {
+  animation-delay: 0.75s;
+}
+.menu__global__cadre h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+.menu__global__cadre p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.menu__global__cadre .menu__global__cadre__page__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__global__cadre .menu__global__cadre__page__text__prix {
+  text-overflow: clip;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 26px 20px 0 20px;
+}
+.menu__global__cadre .menu__global__cadre__page__text__icone {
+  background-color: #99E2D0;
+  padding: 22px 18px;
+  margin-right: -60px;
+}
+.menu__global__cadre .menu__global__cadre__page__text__icone i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  color: #99E2D0;
+}
+.menu__global__cadre:hover .menu__global__cadre__page__text__icone {
+  margin-right: 0;
+}
+.menu__global__cadre:hover .menu__global__cadre__page__text__icone i {
+  margin-right: 0;
+  animation: spin 0.5s ease-in-out;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  user-select: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0px 2px 12px -3px #7979798a;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  cursor: pointer;
+  padding: 15px 50px;
+}
+button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 3px 8px -3px #000000;
+}
+
+header i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  animation: 0s 1s disparition forwards;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 130px;
+  height: 130px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #9356dc;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #99e2d0;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #ff79da;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

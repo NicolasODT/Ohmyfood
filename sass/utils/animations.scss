@@ -1,0 +1,140 @@
+@use "../utils/colors.scss";
+
+@mixin spin {
+  @keyframes spin {
+    0% {
+      transform: rotate(-360deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shadow__cadre__restaurant {
+  0% {
+    -webkit-box-box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 0%);
+    box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 0%);
+  }
+  100% {
+    -webkit-box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 30%);
+    box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 30%);
+  }
+}
+@keyframes shadow__cadre__restaurant {
+  0% {
+    -webkit-box-box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 0%);
+    box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 0%);
+  }
+  100% {
+    -webkit-bbox-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 30%);
+    box-shadow: 0px 4px 12px -3px darken(colors.$tertiaire, 30%);
+  }
+}
+
+@-webkit-keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.9, 1.1, 1);
+    transform: scale3d(0.9, 1.1, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.1, 0.9, 1);
+    transform: scale3d(1.1, 0.9, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1, 0.95, 1);
+    transform: scale3d(1, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1, 1);
+    transform: scale3d(0.95, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes disparition {
+  0% {
+    -webkit-transform: scale(100);
+    -ms-transform: scale(100);
+    transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@keyframes disparition {
+  0% {
+    -webkit-transform: scale(100);
+    -ms-transform: scale(100);
+    transform: scale(100);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,144 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+@use "../utils/animations.scss";
+@use "../components/boutons.scss";
+
+img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ensemble {
+  margin-top: -40px;
+  position: relative;
+  padding: 40px 0;
+  border-radius: 40px 40px 0 0;
+  background-color: colors.$gristresclaire;
+}
+
+.ensemble__titre {
+  display: flex;
+  h2 {
+    margin: 0 25px 25px 25px;
+    font-family: "Shrikhand", cursive;
+    font-size: 27px;
+  }
+  @include mixins.coeur;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .menu__global {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    h3 {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin: 10px 20px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 0px;
+        height: 3px;
+        width: 40px;
+        background-color: colors.$tertiaire;
+      }
+    }
+  }
+}
+
+.menu__global__cadre {
+  cursor: pointer;
+  animation: apparition 1.5s;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: 0.15s * $i;
+    }
+  }
+  animation-fill-mode: backwards;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 14px;
+  @include mixins.box-shadow;
+  h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 7px;
+  }
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  .menu__global__cadre__page__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu__global__cadre__page__text__prix {
+    text-overflow: clip;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 26px 20px 0 20px;
+  }
+  .menu__global__cadre__page__text__icone {
+    background-color: colors.$tertiaire;
+    padding: 22px 18px;
+    margin-right: -60px;
+    i {
+      background-color: white;
+      border-radius: 50%;
+      padding: 4px;
+      color: colors.$tertiaire;
+    }
+  }
+  &:hover .menu__global__cadre__page__text__icone {
+    margin-right: 0;
+  }
+  &:hover .menu__global__cadre__page__text__icone i {
+    margin-right: 0;
+    @include animations.spin;
+    animation: spin 0.5s ease-in-out;
+  }
+}
+
+.bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  @include boutons.basic-bouton;
+  padding: 15px 50px;
+}
+
+header i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}

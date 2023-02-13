@@ -1,0 +1,92 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins";
+@use "../utils/animations.scss";
+
+.restaurant {
+  padding: 0 20px;
+  margin-top: 45px;
+  padding-bottom: 65px;
+  background-color: colors.$gristresclaire;
+  .restaurant__cadre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .nouveau {
+      position: relative;
+    }
+    .nouveau::before {
+      content: "Nouveau";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      height: 28px;
+      width: 80px;
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: colors.$tertiaire;
+      color: darken(colors.$tertiaire, 35%);
+      right: 12px;
+      top: 12px;
+      @include mixins.box-shadow;
+    }
+    .nouveau:hover::before,
+    .nouveau:focus::before {
+      -webkit-animation: jello-vertical 0.9s both;
+      animation: jello-vertical 0.9s both;
+    }
+  }
+  h2 {
+    padding: 58px 0 20px 0;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  .restaurant__cadre__interieur {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    height: 250px;
+    border-radius: 15px;
+    @include mixins.box-shadow;
+    &:hover {
+      -webkit-animation: shadow__cadre__restaurant 1.2s linear infinite
+        alternate-reverse both;
+      animation: shadow__cadre__restaurant 1.2s linear infinite
+        alternate-reverse both;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    img {
+      user-select: none;
+      margin-bottom: 8px;
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    h3,
+    p {
+      margin-left: 15px;
+    }
+
+    @include mixins.coeur;
+    i {
+      bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+
+.fonctionnement {
+  counter-reset: numeros_fonctionnement;
+  h2 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 700;
+    margin: 30px 0;
+  }
+  ol {
+    display: flex;
+    gap: 24px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  li {
+    cursor: pointer;
+    user-select: none;
+    margin-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: colors.$gristresclaire;
+    flex-grow: 1;
+    border-radius: 20px;
+    @include mixins.box-shadow;
+    &::before {
+      content: counter(numeros_fonctionnement);
+      counter-increment: numeros_fonctionnement;
+      border-radius: 50%;
+      background-color: colors.$primaire;
+      color: white;
+      position: relative;
+      right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 14px;
+      min-width: 25px;
+      min-height: 25px;
+    }
+    &:hover {
+      background: fade-out(colors.$primaire, 0.85);
+      .fas {
+        color: colors.$primaire;
+      }
+    }
+  }
+  i {
+    font-size: 20px;
+    width: 20px;
+    margin: 26px 30px 26px 12px;
+  }
+  .fas {
+    color: colors.$grisclaire;
+  }
+}

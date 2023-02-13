@@ -1,0 +1,12 @@
+@use "../utils/colors.scss";
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: colors.$gris;
+    padding: 18px;
+    background-color: rgb(230, 230, 230);
+  }

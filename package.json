@@ -1,0 +1,24 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouadjet/TerwagneNicolas_3_03032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "bugs": {
+    "url": "https://github.com/ouadjet/TerwagneNicolas_3_03032022/issues"
+  },
+  "homepage": "https://github.com/ouadjet/TerwagneNicolas_3_03032022#readme",
+  "devDependencies": {},
+  "keywords": []
+}
